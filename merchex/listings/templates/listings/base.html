@@ -7,7 +7,15 @@
         <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />	
     </head>
     <body>
-
+    
+        <nav style="background-color:grey; width:100%;padding:1rem;display:grid;column-gap:2rem;grid-auto-flow:column;">
+            <a href="{% url 'band-list' %}">Bands</a>
+            <a href="{% url 'listing-list' %}">Listings</a>
+            <a href="{% url 'about' %}">About us</a>
+            <a href="{% url 'contact' %}">Contact us</a>         
+        </nav>
+        
+        {% include 'listings/includes/messages.html' %}
         {% block content %}{% endblock %}
 
     </body>

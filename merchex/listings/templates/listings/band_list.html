@@ -1,0 +1,20 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+    <h1>Bands!</h1>
+	
+    <p>{{ bands|length }} bands registered :</p>
+    <a href="{% url 'band-create' %}">Add new band</a>
+    
+    <ul>
+		{% for band in bands %}
+        	<li>
+                <a href="{% url 'band-detail' band.id %}">{{ band.name }}</a>
+               _____ <a href="{% url 'band-update' band.id %}">[ update ]</a>
+               _____ <a href="{% url 'band-delete' band.id %}">[ delete ]</a>
+            </li>
+        {% endfor %}
+    </ul>  
+              
+{% endblock %}

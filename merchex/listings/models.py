@@ -20,7 +20,7 @@ class Band(models.Model):
     validators=[MinValueValidator(1900), MaxValueValidator(2023)]
     )
     active = models.fields.BooleanField(default=True)
-    official_fomepage = models.fields.URLField(null=True, blank=True)
+    official_homepage = models.fields.URLField(null=True, blank=True)
 	
 class Listing(models.Model):
     
@@ -37,7 +37,8 @@ class Listing(models.Model):
     title = models.fields.CharField(max_length=100)
     description = models.fields.CharField(max_length=1000)
     sold = models.fields.BooleanField(default=False)
+    type = models.fields.CharField(choices=Type.choices, max_length=5)
     year = models.fields.IntegerField(null=True, 
     validators=[MinValueValidator(0), MaxValueValidator(2023)]
     )
-    type = models.fields.CharField(choices=Type.choices, max_length=5)
+    

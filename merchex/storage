@@ -1,0 +1,27 @@
+Help on package django.contrib.messages in django.contrib:
+
+NNAAMMEE
+    django.contrib.messages
+
+PPAACCKKAAGGEE  CCOONNTTEENNTTSS
+    api
+    apps
+    constants
+    context_processors
+    middleware
+    storage (package)
+    utils
+    views
+
+DDAATTAA
+    DDEEBBUUGG = 10
+    DDEEFFAAUULLTT__LLEEVVEELLSS = {'DEBUG': 10, 'ERROR': 40, 'INFO': 20, 'SUCCESS': 25,...
+    DDEEFFAAUULLTT__TTAAGGSS = {10: 'debug', 20: 'info', 25: 'success', 30: 'warning',...
+    EERRRROORR = 40
+    IINNFFOO = 20
+    SSUUCCCCEESSSS = 25
+    WWAARRNNIINNGG = 30
+
+FFIILLEE
+    /home/pinklady/dev/python/op_django/env/lib/python3.10/site-packages/django/contrib/messages/__init__.py
+

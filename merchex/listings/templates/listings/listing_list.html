@@ -1,0 +1,19 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+    <h1>Listing !</h1>
+    <p>What we got :</p>
+    <p>( {{ listing|length }} products)</p>
+    <a href="{% url 'listing-create' %}">Add your own goodies</a>
+    <ul>
+		{% for el in listing %}
+    		<li>
+                <a href="{% url 'listing-detail' el.id %}">{{ el.title }}</a>
+                _____ <a href="{% url 'listing-update' el.id %}">[ Update ]</a>
+                _____ <a href="{% url 'listing-delete' el.id %}">[ Delete ]</a>
+            </li>
+    	{% endfor %}
+	</ul>
+
+{% endblock %}

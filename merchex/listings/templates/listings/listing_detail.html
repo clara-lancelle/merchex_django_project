@@ -1,0 +1,21 @@
+# listings/templates/listings/listing_detail.html
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ listing.title }}</h2>
+
+<ul>
+    <li>Category : {{ listing.get_type_display }}</li>
+    <li>Sold : {{ listing.sold|yesno }}</li>
+    <li>Year :{% if listing.year %} {{ listing.year }} {% else %} unknow {% endif %}</li>
+</ul>
+
+<p>{{ listing.description }}</p>
+
+<a href="{% url 'listing-update' listing.id %}">[ Update ]</a>
+<a href="{% url 'listing-delete' listing.id %}">[ Delete ]</a>
+<a href="{% url 'listing-list' %}">Back to the listings list</a>
+
+{% endblock %}

@@ -1,1 +1,38 @@
-* { color : pink }
+* { color : #ff99bb; }
+
+.errorlist li { 
+    margin-bottom: -10px;
+    margin-top: 1.2rem;
+    color: darkred;
+    list-style:none; 
+}
+
+input {
+    height: 1.5rem;
+    border: 1px solid grey;
+}
+
+.messages {
+    padding: 0px;
+}
+
+.messages li {
+    height: 2rem;
+    color: white;
+    list-style:none;
+    display: grid;
+    align-content: center;         
+}
+
+.messages .success {
+    background-color: lightgreen;
+}
+
+.messages .info {
+    background-color: lightorange;
+}
+
+.messages .error {
+    background-color: #be0d0d;
+}
+

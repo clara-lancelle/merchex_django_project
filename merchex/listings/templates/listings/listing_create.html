@@ -2,14 +2,14 @@
 
 {% block content %}
 
-    <h1>Contact page</h1>
+    <h1>Add your Goodies</h1>
 
-    <p>We're here to help you.</p>
+    <p>We Love Music</p>
 
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Envoyer">
     </form>
-    
+
 {% endblock %}
